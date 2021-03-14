@@ -228,7 +228,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182227887}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -371,9 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f9be8a7e3ac23459e5aeb527856e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyship: {fileID: 6937643972051303199, guid: c841f7024e41a5f4e96cb45ee6d2f713,
-    type: 3}
-  repeatTime: 3
+  time: 2
 --- !u!4 &1146474260
 Transform:
   m_ObjectHideFlags: 0
@@ -525,10 +523,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ff570284135514daa988131dc98145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  galaxypools:
-  - name: Enemy
-    obj: {fileID: 6937643972051303199, guid: c841f7024e41a5f4e96cb45ee6d2f713, type: 3}
-    size: 10
-  - name: Bullet
-    obj: {fileID: 6163279935622931671, guid: e9aba2d665e901947b152037b8afc663, type: 3}
-    size: 10
+  pools:
+  - tag: Enemy
+    prefab: {fileID: 6937643972051303199, guid: c841f7024e41a5f4e96cb45ee6d2f713,
+      type: 3}
+    size: 3
+  - tag: Bullet
+    prefab: {fileID: 6163279935622931671, guid: e9aba2d665e901947b152037b8afc663,
+      type: 3}
+    size: 5

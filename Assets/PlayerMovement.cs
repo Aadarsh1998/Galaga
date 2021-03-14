@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            bullet.transform.position = new Vector3(transform.position.x,transform.position.y + offset,0);
-            Instantiate(bullet, bullet.transform.position, Quaternion.identity);
+            Vector3 bulletSpawnPosition = new Vector3(transform.position.x, transform.position.y + offset, 0);
+            ObjectPooler.Instance.SpawnFromPool("Bullet", bulletSpawnPosition, Quaternion.identity);
         }
     }
 }
