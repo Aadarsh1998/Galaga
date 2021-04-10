@@ -47,8 +47,8 @@ public class ObjectPooler : MonoBehaviour
     {
         if (!bulletPoolDictionary.ContainsKey(tag))
         {
-           // Debug.LogWarning("pool with tag" + tag + " doesn't exist");
-            return null;
+           Debug.LogWarning("pool with tag" + tag + " doesn't exist");
+           return null;
         }
         GameObject objectToSpawn = bulletPoolDictionary[tag].Dequeue();
         objectToSpawn.SetActive(true);
